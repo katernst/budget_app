@@ -1,0 +1,7 @@
+<h1>List of all your expenditures!</h1>
+<% @user.expenditures.each do |ex| %>
+	<strong>Item: </strong> <%= ex.name %> 
+	<strong>Price: </strong> <%= ex.price %> <br />
+<% end %>
+
+<br /><%= link_to 'Add New Expenditure' , new_expenditure_path(@current_user) %>
